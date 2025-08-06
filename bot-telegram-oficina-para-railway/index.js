@@ -27,13 +27,13 @@ bot.on('message', (msg) => {
 
   if (chatId !== userId) return;
 
-  if (texto === 'sí' || texto === 'si') {
+  if (texto === '/sí' || texto === '/si') {
     diasTotales--;
     fs.writeFileSync(dbPath, JSON.stringify({ dias: diasTotales }));
     bot.sendMessage(chatId, `¡Perfecto! Te quedan ${diasTotales} días de oficina.`);
-  } else if (texto === 'no') {
+  } else if (texto === '/no') {
     bot.sendMessage(chatId, `¡Ok! No se descuenta ningún día. Siguen siendo ${diasTotales}.`);
-  } else if (texto === 'status') {
+  } else if (texto === '/status') {
     bot.sendMessage(chatId, `Te quedan ${diasTotales} días de oficina.`);
   } else {
     bot.sendMessage(chatId, 'Habla con Merlín real, yo solo soy un bot.');
