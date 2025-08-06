@@ -33,7 +33,7 @@ bot.on('message', (msg) => {
     bot.sendMessage(chatId, `¡Perfecto! Te quedan ${diasTotales} días de oficina.`);
   } else if (texto === 'no') {
     bot.sendMessage(chatId, `¡Ok! No se descuenta ningún día. Siguen siendo ${diasTotales}.`);
-  } else if (texto === 'estado') {
+  } else if (texto === 'status') {
     bot.sendMessage(chatId, `Te quedan ${diasTotales} días de oficina.`);
   } else {
     bot.sendMessage(chatId, 'Habla con Merlín real, yo solo soy un bot.');
