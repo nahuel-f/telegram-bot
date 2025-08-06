@@ -14,7 +14,7 @@ if (fs.existsSync(dbPath)) {
 
 const bot = new TelegramBot(token, { polling: true });
 
-bot.sendMessage(userId, 'Hola, soy tu bot de oficina. ¿Listo para comenzar?');
+bot.sendMessage(userId, 'Hola, soy Merlino Bot. Seguimos con el countdown de oficina');
 
 // De lunes a viernes a las 11:00 AM hora del servidor
 schedule.scheduleJob('0 11 * * 1-5', () => {
@@ -36,6 +36,6 @@ bot.on('message', (msg) => {
   } else if (texto === 'estado') {
     bot.sendMessage(chatId, `Te quedan ${diasTotales} días de oficina.`);
   } else {
-    bot.sendMessage(chatId, 'Habla con Merlín, yo solo soy un bot.');
+    bot.sendMessage(chatId, 'Habla con Merlín real, yo solo soy un bot.');
   }
 });
