@@ -6,7 +6,7 @@ const token = process.env.BOT_TOKEN;
 const userId = parseInt(process.env.USER_ID, 10);
 const dbPath = './contador.json';
 
-let diasTotales = 100;
+let diasTotales = 96;
 if (fs.existsSync(dbPath)) {
   const data = JSON.parse(fs.readFileSync(dbPath));
   diasTotales = data.dias;
